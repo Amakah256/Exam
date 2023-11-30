@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+   <style>
+    #slideshow-container {
+      max-width: 500px;
+      position: relative;
+      margin: auto;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    } 
+    .images {
+      width: 10px;
+      
+    }
+  </style>
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">AMAKAH</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4">OKIDI DAVID MAKMOT</h1>
+      <p class="lead">FINAL EXAM</p>
+    </div>
+  </header>
+
+  <section class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2>PERSONAL PHOTO</h2>
+        
+        <div id="slideshow-container">
+          <div class="mySlides">
+            <img src="img3.jpg" style="width:100%">
+          </div>
+        
+          <div class="mySlides">
+            <img src="img5.jpg" style="width:100%">
+          </div>
+        
+          <!-- Add more slides as needed -->
+        
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        
+        <script>
+          let slideIndex = 1;
+          showSlides(slideIndex);
+        
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+        
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+        
+          function showSlides(n) {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+          }
+        </script>
+                
+            
+
+      </div>
+      <div class="col-lg-4 bg-white smoke">
+        <h2>MY DETAILS</h2>
+        <ul>
+            <li>Okidi David Makmot</li>
+            <li>23/BSE/BU/R/0009</li>
+            <li><a href="mailto:info@example.com?subject=Inquiry&body=Hello%20there!">amakahdove@gmail.com</a>
+            </li>
+            <li>+256-77-699-4210</li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- New section with rows and columns -->
+  <div class="new-section">
+    <div class="row ">
+      <h2>Organisational websites</h2>
+      <div class="col">
+        <a href="https://www.github.com" target="_blank">https---amakah256.github.io-organt-.url</a>
+      </div>
+      <div class="col">
+        <a href="https://www.netlify.com" target="_blank">frabjous-alfajores-edae46.netlify.app.url</a>
+
+      </div>
+  
+    </div>
+  </div>
+
+  <div class="new-section">
+    <div class="row ">
+      <h2>Personal websites</h2>
+      <div class="col">
+        <a href="https---amakah256.github.io-organt-.url" target="_blank">https---amakah256.github.io-courseunit-.url</a>
+      </div>
+      <div class="col">
+        <a href="frabjous-alfajores-edae46.netlify.app.url" target="_blank">https---chimerical-monstera-2d0aaa.netlify.app.url</a>
+      </div>
+  
+    </div>
+  </div>
+
+  </section>
+
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; Designed by amakahdove@gmail.com</p>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies (Popper.js and jQuery) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+ 
+</head>
+  
+    
+</body>
+</html>
